@@ -33,11 +33,11 @@
 
             if condition.status == "Unknown" then
               status_unknown = status_unknown + 1
-            elseif condition.status == "False" then
+            elseif condition.status == "False" and condition.type ~= "Stopped" then
               status_false = status_false + 1
             end
 
-            if condition.status ~= "True" then
+            if condition.status ~= "True" and condition.type ~= "Stopped" then
               msg = msg .. i .. ": " .. condition.type .. " | " .. condition.status
               if condition.reason ~= nil and condition.reason ~= "" then
                 msg = msg .. " | " .. condition.reason
