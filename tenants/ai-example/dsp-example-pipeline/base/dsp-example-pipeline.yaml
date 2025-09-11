@@ -4,7 +4,7 @@ metadata:
   name: dsp-example
 spec:
   params:
-    - default: 'https://github.com/redhat-ai-services/kubeflow-pipelines-examples.git'
+    - default: 'https://github.com/ammachado/kubeflow-pipelines-examples.git'
       description: Repo URL
       name: GIT_URL
       type: string
